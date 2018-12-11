@@ -24,3 +24,26 @@ php_packages:
   - php-pdo
   - php-pecl-apcu
   - php-xml
+
+wordpress_installs:
+  - name: wordpress
+    dbname: wordpress
+    dbuser: wordpress
+    dbpass: '0okm9ijn'
+    dbhost: localhost
+    path: /var/www
+    url: http://localhost
+    title: wordpress
+    admin_name: admin
+    admin_email: root@localhost.localdomain
+    admin_password: '0okm9ijn'
+    themes:
+      - name: twentytwelve
+        activate: true
+      - name: twentythirteen
+    plugins:
+      - name: contact-form-7
+        activate: false
+    users: {}
+    options: []
+    queries: []
