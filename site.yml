@@ -1,4 +1,24 @@
 ---
+- hosts: webservers
+  vars_files:
+    - vars/main.yml
+  roles:
+    - { role: geerlingguy.apache }
+
+- hosts: all
+  become: yes
+  vars_files:
+    - vars/main.yml
+  roles:
+    - { role: geerlingguy.mysql }
+
+- hosts: all
+  become: yes
+  vars_files:
+    - vars/main.yml
+  roles:
+    - { role: geerlingguy.php }
+
 - hosts: all
   sudo: yes
   roles:
